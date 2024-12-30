@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="450.0" prefWidth="620.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.tesla.controllers.PrimaryController" stylesheets="@/styles/style.css"
+      styleClass="main-window">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+   </padding>
+
+   <!-- Havells Logo -->
+   <ImageView fx:id="logoImageView" fitHeight="80.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Havells_Logo.svg/2560px-Havells_Logo.svg.png"/>
+      </image>
+   </ImageView>
+   
+   <!-- Title Label -->
+   <Label text="Datasets" styleClass="label-title">
+      <font>
+         <Font name="System Bold" size="16.0"/>
+      </font>
+   </Label>
+   
+   <!-- TableView for Datasets -->
+   <TableView fx:id="tableView" maxWidth="614.0" minWidth="200.0" prefHeight="340.0" prefWidth="582.0"
+              styleClass="table-view">
+      <columns>
+         <!-- Column for Dataset Name -->
+         <TableColumn fx:id="datasets" editable="false" maxWidth="579.0" minWidth="100.0" prefWidth="200.0"
+                      text="Dataset Name"/>
+         <!-- Column for Product Type (AC/Heater) -->
+         <TableColumn fx:id="productType" prefWidth="110.0" text="Product Type"/>
+         <!-- Column for Min Sales Count -->
+         <TableColumn fx:id="minSalesCount" prefWidth="110.0" text="Min Sales Count"/>
+         <!-- Column for Max Sales Count -->
+         <TableColumn fx:id="maxSalesCount" prefWidth="110.0" text="Max Sales Count"/>
+         <!-- Column for Records for Each Month -->
+         <TableColumn fx:id="numOfRecsForEachMonth" editable="false" prefWidth="160.0" text="Records For Each Month"/>
+      </columns>
+   </TableView>
+   
+   <!-- Buttons for Operations -->
+   <HBox alignment="CENTER" spacing="20.0">
+      <VBox.margin>
+         <Insets/>
+      </VBox.margin>
+      <Button minHeight="0.0" minWidth="90.0" mnemonicParsing="false" onAction="#switchToAddDatasetScene"
+              text="Add" styleClass="button"/>
+      <Button minWidth="90.0" mnemonicParsing="false" onAction="#deleteSelectedDataset" text="Delete"
+              styleClass="button"/>
+      <Button minWidth="90.0" mnemonicParsing="false" onAction="#initializeForecastProcess" text="Get forecast"
+              styleClass="button"/>
+      <Button minWidth="90.0" mnemonicParsing="false" onAction="#switchToUpdate" text="View/Update"
+              styleClass="button"/>
+   </HBox>
+</VBox>

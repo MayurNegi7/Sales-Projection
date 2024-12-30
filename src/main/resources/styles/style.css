@@ -1,0 +1,77 @@
+/* Main window styling - funky, vibrant design */
+.main-window {
+    -fx-background-color: linear-gradient(to bottom right, #FF69B4, #FFD700); /* Funky pink to gold gradient */
+    -fx-padding: 20px;
+    -fx-border-color: #FF4500; /* Bright red-orange border */
+    -fx-border-width: 3px;
+    -fx-border-radius: 15px;
+}
+
+/* Style for the title label */
+.label-title {
+    -fx-font-family: 'Arial', sans-serif; /* Funky font */
+    -fx-font-size: 24px;
+    -fx-text-fill: #FFFFFF; /* White text for contrast */
+    -fx-padding: 10px;
+    -fx-background-color: #FF6347; /* Vibrant tomato red background */
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4, 0.5 , 0 , 0 ); /* Add shadow effect */
+}
+
+/* Style for the table */
+.table-view {
+    -fx-background-color: #E0FFFF; /* Light cyan background for the table */
+    -fx-border-color: #FF4500;     /* Orange-red border around the table */
+    -fx-border-width: 2px;
+    -fx-padding: 10px;
+    -fx-font-family: 'Verdana', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333; /* Dark gray font for table text */
+}
+
+/* Style for the table columns */
+.table-view .column-header-background {
+    -fx-background-color: #FF6347; /* Tomato red for column header background */
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent transparent #FF4500 transparent; /* Orange-red border for rows */
+    -fx-background-color: #FFB6C1; /* Light pink background for table rows */
+    -fx-padding: 5px;
+}
+
+/* Hover effect on table rows */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #FFFF00; /* Bright yellow on hover for row */
+    -fx-text-fill: #000000; /* Black text when hovering for contrast */
+}
+
+/* Buttons styling */
+.button {
+    -fx-background-color: linear-gradient(to right, #00FA9A, #00CED1); /* Neon green to turquoise gradient */
+    -fx-text-fill: #FFFFFF;          /* White text */
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 10px;    /* Rounded corners */
+    -fx-border-color: #00FA9A;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4, 0.5 , 0 , 0 ); /* Drop shadow for buttons */
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #FFD700, #FFA500); /* Gold to orange gradient on hover */
+    -fx-text-fill: #000000; /* Black text on hover for contrast */
+}
+
+/* Pressed effect for buttons */
+.button:pressed {
+    -fx-background-color: #FF1493; /* Deep pink when pressed */
+    -fx-border-color: #FF1493;
+}
